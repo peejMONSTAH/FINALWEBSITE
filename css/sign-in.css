@@ -1,0 +1,157 @@
+/* Background and Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: url('/images/pinoycuisine.webp') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* Dark Overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 60% opacity for dimming */
+    z-index: 1;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2; /* Ensure the form content is above overlay */
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 50px 40px;
+    width: 380px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Logo */
+.logo {
+    max-height: 90px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Title and Subtitle */
+.title {
+    font-size: 28px;
+    color: #d62300;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Form Box */
+.form-box {
+    text-align: center;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-box input:focus {
+    border-color: #d62300;
+    outline: none;
+}
+
+/* Button */
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #d62300;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-box button:hover {
+    background: #a01300;
+    box-shadow: 0px 4px 15px rgba(214, 35, 0, 0.3);
+}
+
+/* Links */
+.form-box a {
+    color: #d62300;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.form-box a:hover {
+    color: #a01300;
+    text-decoration: underline;
+}
+
+/* Special Links */
+.create-account-link {
+    font-weight: bold;
+}
+
+.main-page-link {
+    color: #555;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Separator */
+.separator {
+    color: #aaa;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
